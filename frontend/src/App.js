@@ -16,12 +16,12 @@ function App() {
     <div className="App"> {
       postsList.map((value, key) => {
         return <div class="post">
-          <div class="title">
-            <p clas="user"> {value.user} </p>
-            <p clas="post-title"> {value.title} </p>
+          <div class="header">
+            <p clas="user"> @{value.user} </p>
           </div>
-          <div class="text">
-            <p class="post-text"> {value.text} </p>
+          <div class="body">
+            <p clas="title"> {value.title} </p>
+            <p class="text"> {value.text} </p>
           </div>
         </div>
       })
