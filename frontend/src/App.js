@@ -13,19 +13,26 @@ function App() {
   }, [])
 
   return (
-    <div className="App"> {
-      postsList.map((value, key) => {
-        return <div class="post">
-          <div class="header">
-            <p clas="user"> @{value.user} </p>
+    <div className="App">
+      <div class="pageHeader">
+        <p class="pageTitle"> Note App</p>
+      </div>
+
+      <div class="content">
+        {
+        postsList.map((value, key) => {
+          return <div class="post">
+            <div class="header">
+              <p clas="user"> @{value.user} </p>
+            </div>
+            <div class="body">
+              <p clas="title"> {value.title} </p>
+              <p class="text"> {value.text} </p>
+            </div>
           </div>
-          <div class="body">
-            <p clas="title"> {value.title} </p>
-            <p class="text"> {value.text} </p>
-          </div>
-        </div>
-      })
-    }
+        })
+        }
+      </div>
     </div>
   );
 }

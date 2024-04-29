@@ -1,5 +1,15 @@
 .App {
-  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.pageTitle {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: x-large;
+  padding: 0%;
+  margin-bottom: 10px;
 }
 
 .post {
@@ -35,4 +45,28 @@ p {
 
 .title {
   font-weight: 900;
+}
+
+
+.pageHeader {
+  margin: 0px;
+  padding: 10px 20px;
+  background: #64b454;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.content {
+  margin-top: 90px;
+  overflow-y: auto;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.pageTitle {
+  padding: 0%;
+  margin-left: 50px;
 }
