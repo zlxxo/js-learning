@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import {useEffect, useState} from 'react'
+import { Link } from 'react-router-dom';
 
 export default function Home() {
 
@@ -19,6 +20,7 @@ export default function Home() {
       </div>
 
       <div class="content">
+      <button class="addButton"><Link to="/create" class="addLink">+</Link></button>
         {
         postsList.map((value, key) => {
           return <div class="post">
