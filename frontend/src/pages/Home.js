@@ -20,7 +20,7 @@ export default function Home() {
       </div>
 
       <div class="content">
-      <button class="addButton"><Link to="/create" class="addLink">+</Link></button>
+        <button class="addButton"><Link to="/create" class="addLink">+</Link></button>
         {
         postsList.map((value, key) => {
           return <div class="post">

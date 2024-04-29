@@ -96,3 +96,84 @@ p {
   text-decoration: none;
   color: #5c645a;
 }
+
+
+
+.createPageContent {
+  position: relative;
+  margin-top: 150px;
+  overflow-y: auto;
+  flex-grow: 1;
+  text-align: center;
+}
+
+
+.createButton {
+  border-radius: 5px;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 50px;
+  background-color: #64b454;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid #5c645a;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 16px;
+  font-family: "Lucida Console", "Courier New", monospace;
+
+  margin-right: 4%;
+  margin-left: auto;
+}
+
+.createButton:hover {
+  box-shadow: 0 0 11px #5c645a; 
+}
+
+.field:hover {
+  box-shadow: 0 0 11px #5c645a; 
+}
+
+.field {
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 92%;
+  font-size:16px;
+  font-family: "Lucida Console", "Courier New", monospace;
+
+  padding: 2px;
+}
+
+#createPostText {
+
+  height: 100px;
+  overflow-y: auto;
+}
+
+label {
+  margin-left: 4%;
+  width: fit-content;
+  font-size:16px;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.formGroup {
+  margin-bottom: 20px; /* Add some space between form elements */
+}
+
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  border: 2px solid #5c645a;
+  border-radius: 5px;
+  background-color: #d6ded4;
+}
