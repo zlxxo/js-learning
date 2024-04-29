@@ -79,17 +79,20 @@ p {
   right: 75px;
   width: 50px;
   height: 50px;
-  background-color: #64b454;
-  color: white;
-  border: none;
+  background-color: #d6ded4;
   font-size:30px;
   cursor: pointer;
   text-decoration: none;
+  border: 2px solid #5c645a;
 
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
+.addButton:hover {
+  box-shadow: 0 0 11px #5c645a; 
+}
+
 .addLink {
   text-decoration: none;
-  color: white;
+  color: #5c645a;
 }
