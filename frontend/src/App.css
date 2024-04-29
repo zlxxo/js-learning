@@ -62,7 +62,7 @@ p {
 .content {
   position: relative;
   margin-top: 90px;
-  overflow-y: auto;
+  overflow-x: auto;
   flex-grow: 1;
   text-align: center;
 }
@@ -176,4 +176,10 @@ label {
   border: 2px solid #5c645a;
   border-radius: 5px;
   background-color: #d6ded4;
+}
+
+.error {
+  font-size: 12px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: #b81a1a;
 }

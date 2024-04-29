@@ -16,4 +16,5 @@ npx create-react-app .
 npm install axios
 npm install formik
 npm install react-router-dom
+npm install yup
 ```
