@@ -13,4 +13,7 @@ npm install -g sequelize sequelize-cli     // sql
 ```
 cd frontend/
 npx create-react-app .
+npm install axios
+npm install formik
+npm install react-router-dom
 ```
