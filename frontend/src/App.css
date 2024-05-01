@@ -6,10 +6,43 @@
 }
 
 .pageTitle {
-  font-family: "Lucida Console", "Courier New", monospace;
   font-size: x-large;
+  font-weight: 900;
+  color: #2c3838;
+  font-family: "Lucida Console", "Courier New", monospace;
   padding: 0%;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.menu {
+  margin-right: 60px;
+  margin-bottom: 0px;
+}
+
+.menu ul {
+  height: max-content;
+  list-style-type: none;
+  margin: 0;
+}
+
+.menu li{
+  display: inline;
+  margin-left: 10px;
+}
+
+.menu a {
+  font-size: 16px;
+  padding-bottom: 0%;
+  height: max-content;
+  text-decoration: none;
+  color: #5c645a;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.menu a:hover {
+  font-weight: 900;
+  color: #2c3838;
 }
 
 .post {
@@ -50,7 +83,10 @@ p {
 
 .pageHeader {
   margin: 0px;
-  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
   background: #64b454;
   position: fixed;
   top: 0;

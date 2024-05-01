@@ -8,9 +8,15 @@ function App() {
   return (
     <div className="App">
 
-      <div class="pageHeader">
-        <p class="pageTitle"> Note App</p>
-      </div>
+<div class="pageHeader">
+  <div class="pageTitle">Notes</div>
+  <div class="menu">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/create">Create Post</a></li>
+    </ul>
+  </div>
+</div>
       <Router>
         <Switch>
           <Route path="/" element={<Home />} />
