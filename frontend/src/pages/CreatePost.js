@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
+
 
 
 import {Formik, Form, Field, ErrorMessage} from 'formik'
@@ -13,6 +15,8 @@ function CreatePost() {
     text: "",
   }
 
+  const navigate = useNavigate();
+
   const Validation = Yup.object().shape({
     user: Yup.string().min(3).max(10).required(),
     title: Yup.string().required(),
@@ -22,6 +26,7 @@ function CreatePost() {
   const SubmitFunction = (data) => {
     axios.post("http://localhost:3001/posts", data).then((response) => {
       console.log("Successfull post!")
+      navigate("/")
     })
   }
 
