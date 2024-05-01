@@ -13,7 +13,7 @@ function App() {
   <div class="menu">
     <ul>
       <li><a href="/">Home</a></li>
-      <li><a href="/create">Create Post</a></li>
+      <li><a href="/create">Create a Post</a></li>
     </ul>
   </div>
 </div>

@@ -78,6 +78,11 @@ p {
 
 .title {
   font-weight: 900;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.text {
+  color: #2c3838;
 }
 
 
