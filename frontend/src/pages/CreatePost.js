@@ -27,9 +27,6 @@ function CreatePost() {
 
   return (
     <div>
-      <div class="pageHeader">
-        <p class="pageTitle"> Note App</p>
-      </div>
       <div class="createPageContent">
         <Formik initialValues={initValues} onSubmit={SubmitFunction} validationSchema={Validation}>
             <Form className='formContainer'>

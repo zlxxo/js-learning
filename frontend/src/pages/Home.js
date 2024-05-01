@@ -22,9 +22,6 @@ export default function Home() {
 
   return (
     <div>
-      <div class="pageHeader">
-        <p class="pageTitle"> Note App</p>
-      </div>
 
       <div class="content">
         <button class="addButton"><Link to="/create" class="addLink">+</Link></button>

@@ -7,6 +7,10 @@ function App() {
 
   return (
     <div className="App">
+
+      <div class="pageHeader">
+        <p class="pageTitle"> Note App</p>
+      </div>
       <Router>
         <Switch>
           <Route path="/" element={<Home />} />
