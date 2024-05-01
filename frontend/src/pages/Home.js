@@ -2,10 +2,12 @@ import React from 'react'
 import axios from 'axios'
 import {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
 
     const [postsList, setPostsList] = useState([])
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios.get("http://localhost:3001/posts").then((response) => {
@@ -27,7 +29,7 @@ export default function Home() {
         <button class="addButton"><Link to="/create" class="addLink">+</Link></button>
         {
         postsList.map((value, key) => {
-          return <div class="post">
+          return <div class="post" onClick={() => {navigate(`/post/${value.id}`)}}>
             <div class="header">
               <p clas="user"> @{value.user} </p>
             </div>

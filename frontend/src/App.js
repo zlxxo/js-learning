@@ -2,6 +2,7 @@ import './App.css';
 import {BrowserRouter as Router, Route, Routes as Switch} from 'react-router-dom'
 import Home from './pages/Home'
 import CreatePost from './pages/CreatePost';
+import Post from './pages/Post';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Switch>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<CreatePost />} />
+          <Route path="/post/:id" element={<Post />} />
         </Switch>
       </Router>
     </div>
