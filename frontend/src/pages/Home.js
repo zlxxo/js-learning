@@ -9,7 +9,14 @@ export default function Home() {
 
     useEffect(() => {
         axios.get("http://localhost:3001/posts").then((response) => {
-          setPostsList(response.data)
+          
+          const posts = response.data;
+          // sort by creation date
+          posts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+          //console.log(posts);
+          
+          setPostsList(posts)
+
         })
       }, [])
 
