@@ -28,7 +28,7 @@
 
 .menu li{
   display: inline;
-  margin-left: 10px;
+  margin-left: 25px;
 }
 
 .menu a {
@@ -242,6 +242,8 @@ label {
 }
 
 .right {
+  margin-top: 20px;
+  width: 500px;
   margin-right: 150px;
 }
 
@@ -251,11 +253,80 @@ label {
   background-color: #d6ded4;
   width: 400px;
   height: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom:10px;
   border-radius: 25px;
   border: 2px solid #5c645a;
 
+  position: fixed;
+  top: 120px;
+  left: 200px;
+
+}
+
+.commentsTitle {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: #2c3838;
+  margin-bottom: 20px;
+  padding-left: 0%;
+  text-align: left;
+}
+
+
+.comment {
+  padding: 15px;
+  width: 400px;
+  height: fit-content;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: 0px;
+  font-size: 16px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: #2c3838;
+  background-color: #d6ded4;
+  border: 2px solid #5c645a;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.addComment {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #d6ded4;
+  font-size:16px;
+  border: 2px solid #5c645a;
+  margin-bottom: 20px;
+  text-align: center;
+
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.addComment:hover {
+  box-shadow: 0 0 11px #5c645a; 
+}
+
+.commentInput {
+
+  width: 350px;
+  height: fit-content;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  padding: 10px;
+  font-size:16px;
+  border: 2px solid #5c645a;
+  margin-right: 25px;
+  overflow-y: auto;
+
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.newComment {
+  height: fit-content;
+  display: flex;
+  align-items: center; /* Align items vertically */
+  margin-left: 0;
+  padding: 0;
 }
