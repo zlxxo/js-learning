@@ -13,6 +13,8 @@ const db = require('./models')
 // routers
 const postRouter = require('./routes/Posts')
 app.use("/posts", postRouter) // route for posts is /post == localhost/post
+const commentRouter = require('./routes/Comments')
+app.use("/comments", commentRouter) // route for comments is /comments
 
 
 // create database
