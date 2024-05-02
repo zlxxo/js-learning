@@ -15,13 +15,13 @@ router.get("/:id", async (req, res) => {
     res.json(postComments)
 });
 
-// router.post("/", async (req, res) => {
-//     const post = req.body
+router.post("/", async (req, res) => {
+    const comment = req.body
 
-//     await Posts.create(post); // post is an object with same format as table
+    await Comments.create(comment); // post is an object with same format as table
 
-//     res.json(post)
+    res.json(comment)
 
-// });
+});
 
 module.exports = router;
