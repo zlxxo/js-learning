@@ -39,9 +39,7 @@ router.post("/login", async (req, res) => {
             return;
         }
         const token = sign({
-            username: user.username,
-            id: user.id
-        }, "randomsecret")
+            username: user.username, id: user.id }, "randomsecret")
         res.json(token)         // send token from backend to frontend
     })
 })

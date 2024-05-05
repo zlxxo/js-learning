@@ -19,7 +19,17 @@ function Post() {
             return;
         }
         
-        axios.post(`http://localhost:3001/comments`, data).then((response) => {
+        axios.post(`http://localhost:3001/comments`, data, {
+            headers: {
+                accessToken: sessionStorage.getItem("accessToken")
+            },
+        }).then((response) => {
+            
+            if(response.data.error) {
+                alert(response.data.error)
+                return;
+            }
+
             console.log("Comment added!")
             setComments([...comments, response.data])
             setNewComment("")

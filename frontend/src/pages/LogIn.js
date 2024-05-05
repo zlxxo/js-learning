@@ -27,6 +27,8 @@ function LogIn() {
             } 
 
             sessionStorage.setItem("accessToken", response.data)
+
+            navigate("/")
         })
     }
       

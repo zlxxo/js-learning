@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const {Comments} = require("../models")
+const {validateToken} = require("../middlewares/AuthMiddleware")
 
 router.get("/:id", async (req, res) => {
     const postId = req.params.id;
@@ -15,7 +16,7 @@ router.get("/:id", async (req, res) => {
     res.json(postComments)
 });
 
-router.post("/", async (req, res) => {
+router.post("/", validateToken, async (req, res) => { // after recieving req check if the user is logged in
     const comment = req.body
 
     await Comments.create(comment); // post is an object with same format as table
