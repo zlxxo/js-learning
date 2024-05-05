@@ -21,8 +21,7 @@ function SignUp() {
 
     const SubmitFunction = (data) => {
         axios.post("http://localhost:3001/users", data).then((response) => {
-            console.log(data)
-            //navigate("/")
+            navigate("/login")
         })
     }
       
