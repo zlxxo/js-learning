@@ -14,6 +14,7 @@ const validateToken = (req, res, next) => {
 
         const validToken = verify(token, "randomsecret")
         if(validToken) {
+            req.user = validToken
             return next();
         }
 
