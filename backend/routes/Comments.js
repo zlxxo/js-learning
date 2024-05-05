@@ -18,6 +18,7 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", validateToken, async (req, res) => { // after recieving req check if the user is logged in
     const comment = req.body
+    comment.username = req.user.username
 
     await Comments.create(comment); // post is an object with same format as table
 

@@ -72,7 +72,9 @@ function Post() {
                     <button class="addComment" onClick={addNewComment}>+</button>
                 </div>
                 {comments.map((value, key) => {
-                    return <div class="comment">{value.commentBody}</div>
+                    return <div class="comment">
+                                <span class="username">@{value.username}</span> {value.commentBody}
+                            </div>
                 })}
             </div>
         </div>

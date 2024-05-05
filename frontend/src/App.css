@@ -184,7 +184,7 @@ p {
   font-size:16px;
   font-family: "Lucida Console", "Courier New", monospace;
 
-  padding: 2px;
+  padding: 5px;
 }
 
 #createPostText {
@@ -329,4 +329,8 @@ label {
   align-items: center; /* Align items vertically */
   margin-left: 0;
   padding: 0;
+}
+
+.username {
+  font-weight: 900;
 }
