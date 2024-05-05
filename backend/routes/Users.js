@@ -4,6 +4,8 @@ const bcrypt = require('bcrypt');
 
 const {Users} = require("../models")
 
+const {sign} = require("jsonwebtoken")
+
 router.post("/", async (req, res) => {
     const {username, password} = req.body
     bcrypt.hash(password, 10).then((hash) => {
@@ -23,17 +25,24 @@ router.post("/login", async (req, res) => {
     })
 
     if(!user) {
-        res.json("Wrong username or password")
+        res.json({
+            error: "Wrong username or password"
+        })
         return;
     }
 
     bcrypt.compare(password, user.password).then((same) => {
         if(!same) {
-            res.json("Wrong username or password")
+            res.json({
+                error: "Wrong username or password"
+            })
             return;
         }
-
-        res.json("Welcome!")
+        const token = sign({
+            username: user.username,
+            id: user.id
+        }, "randomsecret")
+        res.json(token)         // send token from backend to frontend
     })
 })
 
