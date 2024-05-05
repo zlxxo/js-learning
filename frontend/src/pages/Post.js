@@ -31,7 +31,11 @@ function Post() {
             }
 
             console.log("Comment added!")
-            setComments([...comments, response.data])
+            const commentAdd = {
+                commentBody: newComment,
+                username: response.data.username
+            }
+            setComments([...comments, commentAdd])
             setNewComment("")
         })
     }
