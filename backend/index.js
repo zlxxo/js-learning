@@ -15,6 +15,8 @@ const postRouter = require('./routes/Posts')
 app.use("/posts", postRouter) // route for posts is /post == localhost/post
 const commentRouter = require('./routes/Comments')
 app.use("/comments", commentRouter) // route for comments is /comments
+const userRouter = require('./routes/Users')
+app.use("/users", userRouter) // route for users (log in/ sign up)
 
 
 // create database
