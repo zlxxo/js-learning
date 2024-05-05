@@ -33,12 +33,12 @@ function SignUp() {
                 <label>User</label>
                 <div class="formGroup">
                   <ErrorMessage class="error" name='username' component="span" />
-                  <Field autocomplete="off" type="password" class="field" id="createPostUser" name="username" placeholder="Username"></Field>
+                  <Field autocomplete="off" class="field" id="createPostUser" name="username" placeholder="Username"></Field>
                 </div>
                 <label>Password</label>
                 <div class="formGroup">
                   <ErrorMessage class="error" name='password' component="span" />
-                  <Field autocomplete="off" class="field" id="createPostTitle" name="password" placeholder="Password"></Field>
+                  <Field autocomplete="off" type="password" class="field" id="createPostTitle" name="password" placeholder="Password"></Field>
                 </div>
                 <button class="createButton" type='submit'>Sign Up</button>
             </Form>
