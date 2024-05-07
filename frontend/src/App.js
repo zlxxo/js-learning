@@ -12,13 +12,17 @@ function App() {
     <div className="App">
 
 <div class="pageHeader">
-  <div class="pageTitle">Notes</div>
+  <div class="pageTitle">Thought Share</div>
   <div class="menu">
     <ul>
       <li><a href="/">Home</a></li>
       <li><a href="/create">Create a Post</a></li>
-      <li><a href="/login">Log In</a></li>
-      <li><a href="/signup">Sign Up</a></li>
+      {!sessionStorage.getItem("accessToken") && (
+        <>
+          <li><a href="/login">Log In</a></li>
+          <li><a href="/signup">Sign Up</a></li>
+        </>
+      )}
     </ul>
   </div>
 </div>
