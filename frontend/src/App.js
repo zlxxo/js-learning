@@ -28,6 +28,11 @@ function App() {
       });
   }, []);
 
+  const LogOut = () => {
+    localStorage.removeItem("accessToken")
+    setAuthState(false)
+  }
+ 
   return (
     <div className="App">
 
@@ -38,11 +43,15 @@ function App() {
           <div class="menu">
             <ul>
               <li><a href="/">Home</a></li>
-              <li><a href="/create">Create a Post</a></li>
-              {!authState && (
+              {!authState ? (
                 <>
                   <li><a href="/login">Log In</a></li>
                   <li><a href="/signup">Sign Up</a></li>
+                </>
+              ) : (
+                <>
+                  <li><a href="/create">Create a Post</a></li>
+                  <button onClick={LogOut}>Sign Out</button>
                 </>
               )}
             </ul>

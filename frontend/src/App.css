@@ -31,6 +31,19 @@
   margin-left: 25px;
 }
 
+.menu button{
+  display: inline;
+  margin-left: 25px;
+  border: 0cm;
+  background-color: inherit;
+  font-size: 16px;
+  padding-bottom: 0%;
+  height: max-content;
+  text-decoration: none;
+  color: #5c645a;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
 .menu a {
   font-size: 16px;
   padding-bottom: 0%;
@@ -43,6 +56,12 @@
 .menu a:hover {
   font-weight: 900;
   color: #2c3838;
+}
+
+.menu button:hover {
+  font-weight: 900;
+  color: #2c3838;
+  cursor: pointer;
 }
 
 .post {
