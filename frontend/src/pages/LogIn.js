@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useContext, useState} from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+import {AuthContext} from '../helpers/AuthContext'
 
 import {Formik, Form, Field, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
@@ -13,6 +14,7 @@ function LogIn() {
       }
     
     const navigate = useNavigate();
+    const {setAuthState} = useContext(AuthContext)
 
     const Validation = Yup.object().shape({
     username: Yup.string().min(3).max(10).required(),
@@ -27,6 +29,7 @@ function LogIn() {
             } 
 
             localStorage.setItem("accessToken", response.data)
+            setAuthState(true)
 
             navigate("/")
         })
