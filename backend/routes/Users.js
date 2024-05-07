@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
+const {validateToken} = require('../middlewares/AuthMiddleware')
 
 const {Users} = require("../models")
 
@@ -42,6 +43,10 @@ router.post("/login", async (req, res) => {
             username: user.username, id: user.id }, "randomsecret")
         res.json(token)         // send token from backend to frontend
     })
-})
+});
+
+router.get("/auth", validateToken, async (req, res) => {
+    res.json(req.user);
+});
 
 module.exports = router;

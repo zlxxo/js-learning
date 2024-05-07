@@ -7,15 +7,26 @@ import SignUp from './pages/SignUp';
 import LogIn from './pages/LogIn';
 import {AuthContext} from './helpers/AuthContext'
 import {useState, useEffect} from 'react'
+import axios from 'axios';
 
 function App() {
 
   const [authState, setAuthState] = useState(false)
+  
   useEffect(() => {
-    if(localStorage.getItem("accessToken")) {
-      setAuthState(true)
-    }
-  }, [])
+    axios.get("http://localhost:3001/users/auth", {
+        headers: {
+          accessToken: localStorage.getItem("accessToken"),
+        },
+      })
+      .then((response) => {
+        if (response.data.error) {
+          setAuthState(false);
+        } else {
+          setAuthState(true);
+        }
+      });
+  }, []);
 
   return (
     <div className="App">
