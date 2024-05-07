@@ -11,7 +11,11 @@ import axios from 'axios';
 
 function App() {
 
-  const [authState, setAuthState] = useState(false)
+  const [authState, setAuthState] = useState({
+    username: "",
+    id: 0,
+    status: false,
+  })
   
   useEffect(() => {
     axios.get("http://localhost:3001/users/auth", {
@@ -21,16 +25,24 @@ function App() {
       })
       .then((response) => {
         if (response.data.error) {
-          setAuthState(false);
+          setAuthState({...authState, status: false}); // just change status
         } else {
-          setAuthState(true);
+          setAuthState({
+            username: response.data.username,
+            id: response.data.id,
+            status: true,
+          });
         }
       });
   }, []);
 
   const LogOut = () => {
     localStorage.removeItem("accessToken")
-    setAuthState(false)
+    setAuthState({
+      username: "",
+      id: 0,
+      status: false,
+    })
   }
  
   return (
@@ -43,7 +55,7 @@ function App() {
           <div class="menu">
             <ul>
               <li><a href="/">Home</a></li>
-              {!authState ? (
+              {!authState.status ? (
                 <>
                   <li><a href="/login">Log In</a></li>
                   <li><a href="/signup">Sign Up</a></li>
