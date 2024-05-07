@@ -17,7 +17,7 @@ function App() {
     <ul>
       <li><a href="/">Home</a></li>
       <li><a href="/create">Create a Post</a></li>
-      {!sessionStorage.getItem("accessToken") && (
+      {!localStorage.getItem("accessToken") && (
         <>
           <li><a href="/login">Log In</a></li>
           <li><a href="/signup">Sign Up</a></li>

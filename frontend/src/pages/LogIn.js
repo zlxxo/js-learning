@@ -26,7 +26,7 @@ function LogIn() {
                 return;
             } 
 
-            sessionStorage.setItem("accessToken", response.data)
+            localStorage.setItem("accessToken", response.data)
 
             navigate("/")
         })

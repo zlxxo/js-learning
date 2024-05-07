@@ -21,7 +21,7 @@ function Post() {
         
         axios.post(`http://localhost:3001/comments`, data, {
             headers: {
-                accessToken: sessionStorage.getItem("accessToken")
+                accessToken: localStorage.getItem("accessToken")
             },
         }).then((response) => {
             
